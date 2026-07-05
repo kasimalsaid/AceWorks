@@ -3,6 +3,7 @@ const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelectorAll(".site-nav a");
 const revealItems = document.querySelectorAll(".reveal");
 const depthItems = document.querySelectorAll("[data-depth]");
+const contactForm = document.querySelector(".contact-form");
 
 const setHeaderState = () => {
   header.classList.toggle("scrolled", window.scrollY > 12);
@@ -55,6 +56,26 @@ navLinks.forEach((link) => {
     menuToggle.setAttribute("aria-label", "Öppna meny");
   });
 });
+
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(contactForm);
+    const name = formData.get("namn") || "";
+    const email = formData.get("epost") || "";
+    const message = formData.get("meddelande") || "";
+    const body = [
+      `Namn: ${name}`,
+      `E-post: ${email}`,
+      "",
+      "Meddelande:",
+      message
+    ].join("\n");
+
+    window.location.href = `mailto:kontakt@aceworks.se?subject=${encodeURIComponent("Kontaktförfrågan från AceWorks hemsida")}&body=${encodeURIComponent(body)}`;
+  });
+}
 
 window.addEventListener("scroll", () => {
   setHeaderState();

@@ -37,6 +37,7 @@
           <a href="#arbetssatt">Arbetssätt</a>
           <a href="#kontakt">Kontakt</a>
         </nav>
+        <a class="header-cta" href="#kontakt">Boka ett möte</a>
       </header>
 
       <main>
@@ -53,30 +54,28 @@
             </div>
           </div>
 
-          <div class="hero-visual" aria-hidden="true">
-            <div class="depth-card card-one" data-depth="0.18">
-              <span>Strategi</span>
-              <strong>Process</strong>
+          <div class="hero-visual concept-visual" aria-hidden="true">
+            <div class="back-disc" data-depth="0.12"></div>
+            <div class="column-wall" data-depth="0.18">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
             </div>
-            <div class="depth-card card-two" data-depth="0.28">
-              <span>Data</span>
-              <strong>Beslut</strong>
-            </div>
-            <div class="orbital" data-depth="0.42">
-              <div class="orbital-ring"></div>
-              <div class="orbital-ring inner"></div>
+            <div class="plinth" data-depth="0.24"></div>
+            <div class="cube cube-one" data-depth="0.2"></div>
+            <div class="cube cube-two" data-depth="0.28"></div>
+            <div class="emblem-disc" data-depth="0.38">
+              <div class="emblem-ring"></div>
               <div class="ace-a">
                 <span></span>
               </div>
             </div>
-            <div class="gold-plane" data-depth="0.34"></div>
+            <div class="gold-sphere" data-depth="0.34"></div>
           </div>
         </section>
 
         <section class="services" id="tjanster">
           <div class="section-heading reveal">
             <h2>Tjänster</h2>
-            <p>Strukturerat stöd där affär, data och teknik möts i praktiska lösningar.</p>
+            <p>Vi hjälper dig i hela utvecklingsresan med strukturerat stöd där affär, data och teknik möts i praktiska lösningar.</p>
           </div>
           <div class="service-grid">
             <article class="service-card reveal">
@@ -120,6 +119,7 @@
               genom strategi, digitalisering och datadrivna lösningar. Vi kombinerar analytiskt tänkande,
               teknisk förståelse och affärsperspektiv för att skapa lösningar som fungerar i praktiken.
             </p>
+            <a class="text-link" href="#kontakt">Läs mer om oss</a>
           </div>
           <div class="about-sculpture" aria-hidden="true" data-depth="0.22">
             <div class="slab slab-a"></div>
@@ -180,9 +180,26 @@
               Kontakta AceWorks för ett första samtal om hur vi kan hjälpa ditt företag med strategi,
               digitalisering, dataanalys eller verksamhetsutveckling.
             </p>
-            <a class="button primary" href="mailto:kontakt@aceworks.se">Kontakta oss</a>
+            <a class="email-link" href="mailto:kontakt@aceworks.se">kontakt@aceworks.se</a>
+            <form class="contact-form" action="mailto:kontakt@aceworks.se" method="post" enctype="text/plain">
+              <label>
+                Namn
+                <input name="namn" type="text" autocomplete="name" required />
+              </label>
+              <label>
+                E-post
+                <input name="epost" type="email" autocomplete="email" required />
+              </label>
+              <label class="full">
+                Meddelande
+                <textarea name="meddelande" rows="4" required></textarea>
+              </label>
+              <button class="button primary" type="submit">Skicka meddelande</button>
+            </form>
           </div>
-          <div class="contact-shape" aria-hidden="true" data-depth="0.3"></div>
+          <div class="contact-shape" aria-hidden="true" data-depth="0.3">
+            <span></span>
+          </div>
         </section>
       </main>
 
@@ -199,6 +216,7 @@
           <span class="brand-word">AceWorks</span>
         </a>
         <p>Strategi, data och digitala lösningar för smartare arbetssätt.</p>
+        <a class="footer-mail" href="mailto:kontakt@aceworks.se">kontakt@aceworks.se</a>
       </footer>
     </div>
     <script src="script.js"></script>
